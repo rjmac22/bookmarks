@@ -30,7 +30,14 @@ urlpatterns = [
     url(r'^password_reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$',
          'django.contrib.auth.views.password_reset_confirm', name="password_reset_confirm"),
     url(r'^password_reset/complete/$', 'django.contrib.auth.views.password_reset_complete',
-       name="password_reset_complete")
+       name="password_reset_complete"),
+
+    # New user register
+       url(r'^register/$', views.register, name='register'),
+
+    # edit profile
+    url(r'^edit/$', views.edit, name='edit'),
+
 
 
 ]

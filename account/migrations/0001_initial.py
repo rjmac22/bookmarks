@@ -13,10 +13,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Profiles',
+            name='Profile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('data_of_birth', models.DateField(null=True, blank=True)),
+                ('date_of_birth', models.DateField(null=True, blank=True)),
                 ('photo', models.ImageField(upload_to=b'users/%Y/%m/%d', blank=True)),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
