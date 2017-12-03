@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import include
 
 urlpatterns = [
     # previous login view
@@ -37,6 +38,11 @@ urlpatterns = [
 
     # edit profile
     url(r'^edit/$', views.edit, name='edit'),
+
+    # socal login URL
+    url('social-auth', include('social.apps.django_app.urls', namespace='social')),
+    # url('', include('django.contrib.auth.urls', namespace='auth')),
+    # url('', include('social.apps.django_app.urls', namespace='social')),
 
 
 
