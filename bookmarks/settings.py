@@ -132,3 +132,10 @@ SOCIAL_AUTH_RAISE_EXCEPTIONS = False
 SOCIAL_AUTH_FACEBOOK_KEY = '653169761540539' # Facebook App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '575fbf79e9200bbc288b1bdc6370b7c3' # Facebook App Secret
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+
+
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda u: reverse_lazy('user_detail',
+                                        args=[u.username])
+}
