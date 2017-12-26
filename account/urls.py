@@ -44,8 +44,13 @@ urlpatterns = [
     # url('', include('django.contrib.auth.urls', namespace='auth')),
     # url('', include('social.apps.django_app.urls', namespace='social')),
 
+
+    url(r'^users/follow/$', views.user_follow, name='user_follow'),
+
     url(r'^users/$', views.user_list, name='user_list'),
     url(r'^users/(?P<username>[-\w]+)/$', views.user_detail, name='user_detail'),
+
+
 ]
 
 
